@@ -1,0 +1,80 @@
+<div class="col-md-6 offset" style="margin: auto;">
+    <h2 style="text-align: center; margin-top: 20px; color: yellow;">Add New Employee</h2>
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+  
+      <div class="form-group" >
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="employee.ename" name="name" required #name="ngModel">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+          <div *ngIf="name.errors.required">Name is required.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" [(ngModel)]="employee.eaddress" name="address" required #address="ngModel">
+        <div *ngIf="address.invalid && (address.dirty || address.touched)" class="alert alert-danger">
+          <div *ngIf="address.errors.required">Address is required.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="phonenumber">Phone Number</label>
+        <input type="number" class="form-control" id="phonenumber" [(ngModel)]="employee.ephone" name="phonenumber" required #phonenumber="ngModel">
+        <div *ngIf="phonenumber.invalid && (phonenumber.dirty || phonenumber.touched)" class="alert alert-danger">
+          <div *ngIf="phonenumber.errors.required">Phone Number is required.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email ID</label>
+        <input type="email" class="form-control" id="email" [(ngModel)]="employee.eemail" name="email" required #email="ngModel">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <div *ngIf="email.errors.required">Email ID is required.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="etype">Employee Type</label>
+        <select class="form-control" id="etype" [(ngModel)]="employee.etype" name="etype" required #etype="ngModel">
+          <option value="" disabled>Select Employee Type</option>
+          <option value="full-time">Full Time</option>
+          <option value="part-time">Part Time</option>
+          <option value="intern">Intern</option>
+        </select>
+        <div *ngIf="etype.invalid && (etype.dirty || etype.touched)" class="alert alert-danger">
+          <div *ngIf="etype.errors.required">Employee Type is required.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="jdate">Joining Date</label>
+        <input type="date" class="form-control" id="jdate" [(ngModel)]="employee.ejoiningdate" name="jdate" required #jdate="ngModel">
+        <div *ngIf="jdate.invalid && (jdate.dirty || jdate.touched)" class="alert alert-danger">
+          <div *ngIf="jdate.errors.required">Joining Date is required.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="did">Department Id</label>
+        <input type="number" class="form-control" id="did" [(ngModel)]="employee.did" name="did" required #did="ngModel">
+        <div *ngIf="did.invalid && (did.dirty || did.touched)" class="alert alert-danger">
+          <div *ngIf="did.errors.required">Department ID is required.</div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="pid">Project Id</label>
+        <input type="number" class="form-control" id="pid" [(ngModel)]="employee.pid" name="pid" required #pid="ngModel">
+        <div *ngIf="pid.invalid && (pid.dirty || pid.touched)" class="alert alert-danger">
+          <div *ngIf="pid.errors.required">Project ID is required.</div>
+        </div>
+      </div>
+  
+      <br>
+      <div style="text-align: center;">
+        <button class="btn btn-outline-success" type="submit" [disabled]="employeeForm.invalid">Add New Employee</button>
+      </div>
+    </form>
+  </div>
+  

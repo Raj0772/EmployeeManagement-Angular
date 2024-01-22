@@ -1,0 +1,39 @@
+.main{
+    margin-top: 30px;
+    margin: auto;
+    width: 50%;
+}
+div {
+    background-color: #595c5cc0;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    align-items: start;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 5px;
+}
+
+div > div {
+    margin-bottom: 5px;
+}
+
+div > div:last-child {
+    margin-bottom: 0;
+}
+
+
+/* /home/admin1/angularproject/angularcrud */
